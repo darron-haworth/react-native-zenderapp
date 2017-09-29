@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "pretest": "./node_modules/.bin/eslint -c .eslintrc --ext .js src",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "preset": "react-native",
@@ -37,7 +39,8 @@
     "redux-logger": "^2.7.0",
     "redux-thunk": "^2.1.0",
     "striptags": "^2.2.1",
-    "tcomb-form-native": "^0.6.1"
+    "tcomb-form-native": "^0.6.1",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -54,5 +57,6 @@
     "jest": "19.0.2",
     "jest-react-native": "^18.0.0",
     "react-test-renderer": "15.4.2"
-  }
+  },
+  "snyk": true
 }
